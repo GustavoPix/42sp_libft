@@ -16,7 +16,7 @@
 #include <stdio.h>
 int	ft_isalpha(int c);
 
-void	applyTest(void)
+void	test_isalpha(void)
 {
 	int		i;
 	int		r_ori;
@@ -37,9 +37,4 @@ void	applyTest(void)
 	}
 	if (i == 255)
 		printf("ft_isalpha: OK!");
-}
-
-void	test_isalpha(void)
-{
-	applyTest();
 }

@@ -13,10 +13,13 @@
 #include <stdio.h>
 
 void	test_isalpha(void);
+void	test_isdigit(void);
 
 int	main(void)
 {
 	test_isalpha();
+	printf("\n");
+	test_isdigit();
 	printf("\n");
 	return (0);
 }
