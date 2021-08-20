@@ -28,7 +28,7 @@ void	test_isalpha(void)
 		if (r_ori != r_cus)
 		{
 			printf("ft_isalpha: KO! ");
-			printf("KO! sended %d and expected %d, got %d", i, r_ori, r_cus);
+			printf("Sended %d and expected %d, got %d", i, r_ori, r_cus);
 			break ;
 		}
 		i++;

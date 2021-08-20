@@ -28,7 +28,7 @@ void	test_isprint(void)
 		if (r_ori != r_cus)
 		{
 			printf("ft_isprint: KO! ");
-			printf("KO! sended %d and expected %d, got %d", i, r_ori, r_cus);
+			printf("sended %d and expected %d, got %d", i, r_ori, r_cus);
 			break ;
 		}
 		i++;
