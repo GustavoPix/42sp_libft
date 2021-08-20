@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_isdigit.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 20:49:38 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/19 20:49:38 by glima-de         ###   ########.fr       */
+/*   Created: 2021/08/19 21:12:28 by glima-de          #+#    #+#             */
+/*   Updated: 2021/08/19 21:12:28 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-int	ft_isdigit(int c);
-
-void	test_isdigit(void)
+int	ft_isalnum(int c)
 {
-	int		i;
-	int		r_ori;
-	int		r_cus;
-
-	i = -255;
-	while (i < 255)
-	{
-		r_ori = isdigit(i);
-		r_cus = ft_isdigit(i);
-		if (r_ori != r_cus)
-		{
-			printf("ft_isdigit: KO! ");
-			printf("KO! sended %d and expected %d, got %d", i, r_ori, r_cus);
-			break ;
-		}
-		i++;
-	}
-	if (i == 255)
-		printf("ft_isdigit: OK!");
+	if (c >= 'a' && c <= 'z')
+		return (8);
+	if (c >= 'A' && c <= 'Z')
+		return (8);
+	if (c >= '0' && c <= '9')
+		return (8);
+	return (0);
 }

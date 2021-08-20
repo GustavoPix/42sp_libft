@@ -14,12 +14,15 @@
 
 void	test_isalpha(void);
 void	test_isdigit(void);
+void	test_isalnum(void);
 
 int	main(void)
 {
 	test_isalpha();
 	printf("\n");
 	test_isdigit();
+	printf("\n");
+	test_isalnum();
 	printf("\n");
 	return (0);
 }
