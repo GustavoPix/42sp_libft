@@ -16,6 +16,7 @@ void	test_isalpha(void);
 void	test_isdigit(void);
 void	test_isalnum(void);
 void	test_isascii(void);
+void	test_isprint(void);
 
 int	main(void)
 {
@@ -26,6 +27,8 @@ int	main(void)
 	test_isalnum();
 	printf("\n");
 	test_isascii();
+	printf("\n");
+	test_isprint();
 	printf("\n");
 	return (0);
 }
