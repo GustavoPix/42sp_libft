@@ -17,7 +17,8 @@ void	test_isdigit(void);
 void	test_isalnum(void);
 void	test_isascii(void);
 void	test_isprint(void);
-void	test_strlen(void);
+int		test_strlen(void);
+int		test_memset(void);
 
 int	main(void)
 {
@@ -32,6 +33,8 @@ int	main(void)
 	test_isprint();
 	printf("\n");
 	test_strlen();
+	printf("\n");
+	test_memset();
 	printf("\n");
 	return (0);
 }
