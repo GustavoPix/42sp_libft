@@ -20,6 +20,7 @@ void	test_isprint(void);
 int		test_strlen(void);
 int		test_memset(void);
 int		test_bzero(void);
+int		test_memcpy(void);
 
 int	main(void)
 {
@@ -38,6 +39,8 @@ int	main(void)
 	test_memset();
 	printf("\n");
 	test_bzero();
+	printf("\n");
+	test_memcpy();
 	printf("\n");
 	return (0);
 }
