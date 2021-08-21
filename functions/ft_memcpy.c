@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include <stdlib.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*pd;
-	char			*ps;
+	size_t	i;
+	char	*pd;
+	char	*ps;
 
 	i = 0;
 	pd = (char *)dest;

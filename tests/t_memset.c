@@ -15,6 +15,19 @@
 
 void	*ft_memset(void *str, int c, unsigned int n);
 
+static void	copy(char *src, char *dest)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+}
+
 static int	applyTest(char *str, int c, int n)
 {
 	char	r_ori[80];
@@ -22,13 +35,8 @@ static int	applyTest(char *str, int c, int n)
 	int		i;
 
 	i = 0;
-	while (str[i])
-	{
-		r_ori[i] = str[i];
-		r_cus[i] = str[i];
-		i++;
-	}
-	i = 0;
+	copy(str, r_ori);
+	copy(str, r_cus);
 	memset(r_ori, c, n);
 	ft_memset(r_cus, c, n);
 	while (r_cus[i] || r_ori[i])
@@ -46,7 +54,7 @@ static int	applyTest(char *str, int c, int n)
 
 int	test_memset(void)
 {
-	if (!applyTest("Program", '$', 63))
+	if (!applyTest("Program", '$', 7))
 		return (0);
 	if (!applyTest("Do mesmo modo, o consenso sobre a necessidade de", '$', 16))
 		return (0);

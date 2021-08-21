@@ -9,13 +9,14 @@
 /*   Updated: 2021/08/20 21:14:16 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdlib.h>
 
-void	*ft_memmove(void *destination, const void *source, unsigned int num)
+void	*ft_memmove(void *destination, const void *source, size_t num)
 {
-	unsigned int	i;
-	char			*pd;
-	char			*ps;
-	char			aux[255];
+	size_t	i;
+	char	*pd;
+	char	*ps;
+	char	aux[255];
 
 	i = 0;
 	pd = (char *)destination;

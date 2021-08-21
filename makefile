@@ -1,4 +1,4 @@
-COMPILER = gcc
+COMPILER = clang
 TAGS = -Wall -Wextra -Werror
 
 MAIN = ./main.c
