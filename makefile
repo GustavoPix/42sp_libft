@@ -1,6 +1,5 @@
 COMPILER = clang
-TAGS = -Wall -Wextra -Werror
-
+TAGS = -lbsd -Wall -Wextra -Werror
 MAIN = ./main.c
 TESTS = ./tests/*.c
 FUNCTIONS = ./functions/*.c
