@@ -23,6 +23,7 @@ int		test_bzero(void);
 int		test_memcpy(void);
 int		test_memmove(void);
 int		test_strlcpy(void);
+int		test_strlcat(void);
 
 int	main(void)
 {
@@ -47,6 +48,8 @@ int	main(void)
 	test_memmove();
 	printf("\n");
 	test_strlcpy();
+	printf("\n");
+	test_strlcat();
 	printf("\n");
 	return (0);
 }
