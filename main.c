@@ -21,6 +21,7 @@ int		test_strlen(void);
 int		test_memset(void);
 int		test_bzero(void);
 int		test_memcpy(void);
+int		test_memmove(void);
 
 int	main(void)
 {
@@ -41,6 +42,8 @@ int	main(void)
 	test_bzero();
 	printf("\n");
 	test_memcpy();
+	printf("\n");
+	test_memmove();
 	printf("\n");
 	return (0);
 }
