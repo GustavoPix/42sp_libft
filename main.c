@@ -25,6 +25,7 @@ int		test_memmove(void);
 int		test_strlcpy(void);
 int		test_strlcat(void);
 void	test_toupper(void);
+void	test_tolower(void);
 
 int	main(void)
 {
@@ -53,6 +54,8 @@ int	main(void)
 	test_strlcat();
 	printf("\n");
 	test_toupper();
+	printf("\n");
+	test_tolower();
 	printf("\n");
 	return (0);
 }
