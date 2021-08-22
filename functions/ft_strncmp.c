@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 10:50:47 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 15:23:03 by glima-de         ###   ########.fr       */
+/*   Created: 2021/08/22 11:59:43 by glima-de          #+#    #+#             */
+/*   Updated: 2021/08/22 12:25:07 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
+#include <stdlib.h>
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	a;
+	unsigned char	b;
 
 	i = 0;
-	while (str[i])
+	while (i < n && (str1[i] || str2[i]))
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
+		if (str1[i] != str2[i])
+		{
+			a = str1[i];
+			b = str2[i];
+			return (a - b);
+		}
 		i++;
 	}
 	return (0);

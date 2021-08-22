@@ -27,6 +27,8 @@ int		test_strlcat(void);
 void	test_toupper(void);
 void	test_tolower(void);
 int		test_strrchr(void);
+int		test_strncmp(void);
+int		test_strchr(void);
 
 int	main(void)
 {
@@ -59,6 +61,10 @@ int	main(void)
 	test_tolower();
 	printf("\n");
 	test_strrchr();
+	printf("\n");
+	test_strncmp();
+	printf("\n");
+	test_strchr();
 	printf("\n");
 	return (0);
 }
