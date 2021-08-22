@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_strchr.c                                         :+:      :+:    :+:   */
+/*   t_strrchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 10:50:48 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 11:24:19 by glima-de         ###   ########.fr       */
+/*   Created: 2021/08/22 11:17:24 by glima-de          #+#    #+#             */
+/*   Updated: 2021/08/22 11:37:59 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-
-char *ft_strchr(const char *str, int c);
+char *ft_strrchr(const char *str, int c);
 
 static int	applyTest(char *str, int n)
 {
@@ -23,22 +22,25 @@ static int	applyTest(char *str, int n)
 	char	*sc;
 
 	i = 0;
-	so = strchr(str, n);
-	sc = ft_strchr(str, n);
-	while (so[i] || sc[i])
+	so = strrchr(str, n);
+	sc = ft_strrchr(str, n);
+	if(so || sc)
 	{
-		if (so[i] != sc[i])
+		while (so[i] || sc[i])
 		{
-			printf("ft_strchr: KO! ");
-			printf("search *%c* in *%s*, expected \n*%s*, got \n*%s*", n, str, so, sc);
-			return (0);
+			if (so[i] != sc[i])
+			{
+				printf("ft_strrchr: KO! ");
+				printf("search *%c* in *%s*, expected \n*%s*, got \n*%s*", n, str, so, sc);
+				return (0);
+			}
+			i++;
 		}
-		i++;
 	}
 	return (1);
 }
 
-int	test_strchr(void)
+int	test_strrchr(void)
 {
 	if (!applyTest("Program", 'o'))
 		return (0);
@@ -56,6 +58,6 @@ int	test_strchr(void)
 		return (0);
 	if (!applyTest("", 'c'))
 		return (0);
-	printf("ft_strchr: OK!");
+	printf("ft_strrchr: OK!");
 	return (1);
 }
