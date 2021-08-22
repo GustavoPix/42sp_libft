@@ -29,6 +29,7 @@ void	test_tolower(void);
 int		test_strrchr(void);
 int		test_strncmp(void);
 int		test_strchr(void);
+int		test_memchr(void);
 
 int	main(void)
 {
@@ -65,6 +66,8 @@ int	main(void)
 	test_strncmp();
 	printf("\n");
 	test_strchr();
+	printf("\n");
+	test_memchr();
 	printf("\n");
 	return (0);
 }

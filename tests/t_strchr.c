@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 10:50:48 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 15:33:11 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:35:00 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,20 @@ static int	applyTest(char *str, int n)
 
 int	test_strchr(void)
 {
-	//if (!applyTest("Program", 'o'))
-	//	return (0);
-	//if (!applyTest("Do mesmo modo, o consenso sobre a necessidade de", ','))
-	//	return (0);
-	//if (!applyTest("S(sUj~!_4,dEwuyabK)/~ZtJ{'>nUY4oSc6|3z", '_'))
-	//	return (0);
-	//if (!applyTest("r{@F/s^'mjs|;|*mgnw=&m<|+LF{Pip?/tfMDRCyB;jxfPd~w", 's'))
-	//	return (0);
-	//if (!applyTest("d&n:~<4dPybu8G1&Qsk(+H7SPn8?#LYOZg*Qbah4GgSCD3tG", '+'))
-	//	return (0);
-	//if (!applyTest("ct)vxb;cJ+l1+8@*dRgssa:o}1fZtQ1h2x6#7T$qf:aAy", '@'))
-	//	return (0);
-	//if (!applyTest("g_M@i3c`E^bX9W^F6LBaCeOsl'BDP(3D-lAczYEkmpe:PYe", 'g'))
-	//	return (0);
+	if (!applyTest("Program", 'o'))
+		return (0);
+	if (!applyTest("Do mesmo modo, o consenso sobre a necessidade de", ','))
+		return (0);
+	if (!applyTest("S(sUj~!_4,dEwuyabK)/~ZtJ{'>nUY4oSc6|3z", '_'))
+		return (0);
+	if (!applyTest("r{@F/s^'mjs|;|*mgnw=&m<|+LF{Pip?/tfMDRCyB;jxfPd~w", 's'))
+		return (0);
+	if (!applyTest("d&n:~<4dPybu8G1&Qsk(+H7SPn8?#LYOZg*Qbah4GgSCD3tG", '+'))
+		return (0);
+	if (!applyTest("ct)vxb;cJ+l1+8@*dRgssa:o}1fZtQ1h2x6#7T$qf:aAy", '@'))
+		return (0);
+	if (!applyTest("g_M@i3c`E^bX9W^F6LBaCeOsl'BDP(3D-lAczYEkmpe:PYe", 'g'))
+		return (0);
 	if (!applyTest("", 'c'))
 		return (0);
 	printf("ft_strchr: OK!");
