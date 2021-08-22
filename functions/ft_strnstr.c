@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 12:30:03 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 16:10:17 by glima-de         ###   ########.fr       */
+/*   Created: 2021/08/22 16:05:40 by glima-de          #+#    #+#             */
+/*   Updated: 2021/08/22 16:38:07 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	size_t	i;
-	char	*aux;
+	size_t	ib;
+	size_t	il;
 
-	i = 0;
-	aux = (char *)str;
-	while (i < n)
+	ib = 0;
+	il = 0;
+	if (!little[0])
+		return ((char *)&big[0]);
+	while (big[ib] && ib < len)
 	{
-		if (aux[i] == c)
-			return ((void *)&aux[i]);
-		i++;
+		while (big[ib + il] == little[il])
+		{
+			if (!little[il + 1])
+				return ((char *)&big[ib]);
+			il++;
+			if (!big[ib + il])
+				return (0);
+		}
+		il = 0;
+		ib++;
 	}
 	return (0);
 }

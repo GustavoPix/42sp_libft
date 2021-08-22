@@ -30,6 +30,7 @@ int		test_strrchr(void);
 int		test_strncmp(void);
 int		test_strchr(void);
 int		test_memchr(void);
+int		test_strnstr(void);
 
 int	main(void)
 {
@@ -68,6 +69,8 @@ int	main(void)
 	test_strchr();
 	printf("\n");
 	test_memchr();
+	printf("\n");
+	test_strnstr();
 	printf("\n");
 	return (0);
 }
