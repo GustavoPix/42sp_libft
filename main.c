@@ -32,6 +32,8 @@ int		test_strchr(void);
 int		test_memchr(void);
 int		test_strnstr(void);
 int		test_atoi(void);
+int		test_calloc(void);
+int		test_strdup(void);
 
 int	main(void)
 {
@@ -74,6 +76,10 @@ int	main(void)
 	test_strnstr();
 	printf("\n");
 	test_atoi();
+	printf("\n");
+	test_calloc();
+	printf("\n");
+	test_strdup();
 	printf("\n");
 	return (0);
 }
