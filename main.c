@@ -34,6 +34,7 @@ int		test_strnstr(void);
 int		test_atoi(void);
 int		test_calloc(void);
 int		test_strdup(void);
+int		test_substr(void);
 
 int	main(void)
 {
@@ -80,6 +81,8 @@ int	main(void)
 	test_calloc();
 	printf("\n");
 	test_strdup();
+	printf("\n");
+	test_substr();
 	printf("\n");
 	return (0);
 }
