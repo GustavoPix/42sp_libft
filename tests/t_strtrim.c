@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:56:36 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/24 20:40:49 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/25 18:49:33 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	test_strtrim(void)
 		return (0);
 	if (!applyTest("11212qwerty1212", "12", "11212qwerty"))
 		return (0);
-	if (!applyTest("1212qwerty122", "12", "1212qwerty122"))
+	if (!applyTest("1212qwerty122", "12", "qwerty122"))
 		return (0);
 	if (!applyTest("123qwe123rty", "123", "qwe123rty"))
 		return (0);

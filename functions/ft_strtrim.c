@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:56:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/24 21:16:08 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/25 18:47:57 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	gc_toRemoveRight(char const *str, char const *set)
 		if (iset < 0)
 			iset = ft_strlen(set) - 1;
 	}
-	return (i + iset + 1);
+	return (i + (ft_strlen(set) - iset));
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
