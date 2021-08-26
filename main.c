@@ -37,6 +37,7 @@ int		test_strdup(void);
 int		test_substr(void);
 int		test_strjoin(void);
 int		test_strtrim(void);
+int		test_split(void);
 
 int	main(void)
 {
@@ -89,6 +90,8 @@ int	main(void)
 	test_strjoin();
 	printf("\n");
 	test_strtrim();
+	printf("\n");
+	test_split();
 	printf("\n");
 	return (0);
 }

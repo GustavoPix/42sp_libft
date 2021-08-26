@@ -6,12 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:56:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/25 18:47:57 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/25 19:37:32 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 unsigned int	ft_strlen(const char *str);
 
 static int	gc_toRemoveLeft(char const *str, char const *set)
