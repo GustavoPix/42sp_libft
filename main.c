@@ -39,6 +39,10 @@ int		test_strjoin(void);
 int		test_strtrim(void);
 int		test_split(void);
 int		test_itoa(void);
+void	test_putchar_fd();
+void	test_putstr_fd();
+void	test_putendl_fd();
+void	test_putnbr_fd(void);
 
 int	main(void)
 {
@@ -95,6 +99,17 @@ int	main(void)
 	test_split();
 	printf("\n");
 	test_itoa();
+	printf("\n");
+	printf("ft_strmapi: Não aplicavel");
+	printf("\n");
+	printf("ft_striteri: Não aplicavel");
+	printf("\n");
+	test_putchar_fd();
+	printf("\n");
+	test_putstr_fd();
+	printf("\n");
+	test_putendl_fd();
+	test_putnbr_fd();
 	printf("\n");
 	return (0);
 }
