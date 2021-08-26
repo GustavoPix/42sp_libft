@@ -38,6 +38,7 @@ int		test_substr(void);
 int		test_strjoin(void);
 int		test_strtrim(void);
 int		test_split(void);
+int		test_itoa(void);
 
 int	main(void)
 {
@@ -92,6 +93,8 @@ int	main(void)
 	test_strtrim();
 	printf("\n");
 	test_split();
+	printf("\n");
+	test_itoa();
 	printf("\n");
 	return (0);
 }

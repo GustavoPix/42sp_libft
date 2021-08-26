@@ -6,11 +6,9 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 16:55:36 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 17:11:22 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/26 18:39:57 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_atoi(char *str);
 
 #include <stdio.h>
 #include <stdlib.h>
