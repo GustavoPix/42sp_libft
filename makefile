@@ -50,7 +50,7 @@ NAME = libft.a
 COMPILER = clang
 FLAGS = -Wall -Wextra -Werror
 
-${NAME}:
+$(NAME):
 			${COMPILER} ${FLAGS} -c  ${SRCS}
 			ar rc ${NAME} ${OBJS}
 

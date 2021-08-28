@@ -6,43 +6,46 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 11:15:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/28 12:21:37 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/28 16:46:52 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
 
-void	test_isalpha(void);
-void	test_isdigit(void);
-void	test_isalnum(void);
-void	test_isascii(void);
-void	test_isprint(void);
-int		test_strlen(void);
-int		test_memset(void);
-int		test_bzero(void);
-int		test_memcpy(void);
-int		test_memmove(void);
-int		test_strlcpy(void);
-int		test_strlcat(void);
-void	test_toupper(void);
-void	test_tolower(void);
-int		test_strrchr(void);
-int		test_strncmp(void);
-int		test_strchr(void);
-int		test_memchr(void);
-int		test_strnstr(void);
-int		test_atoi(void);
-int		test_calloc(void);
-int		test_strdup(void);
-int		test_substr(void);
-int		test_strjoin(void);
-int		test_strtrim(void);
-int		test_split(void);
-int		test_itoa(void);
-void	test_putchar_fd();
-void	test_putstr_fd();
-void	test_putendl_fd();
-void	test_putnbr_fd(void);
+char			*ft_itoa(int n);
+int				ft_isprint(int c);
+int				ft_isdigit(int c);
+int				ft_isascii(int c);
+int				ft_isalpha(int c);
+int				ft_isalnum(int c);
+int				ft_tolower(int ch);
+int				ft_toupper(int ch);
+int				ft_atoi(char *str);
+char			*ft_strdup(const char *s);
+unsigned int	ft_strlen(const char *str);
+void			ft_bzero(void *s, size_t n);
+void			ft_putnbr_fd(int n, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putendl_fd(char *s, int fd);
+char			**ft_split(char const *s, char c);
+char			*ft_strchr(const char *str, int c);
+char			*ft_strrchr(const char *str, int c);
+void			*ft_calloc(size_t nmemb, size_t size);
+void			*ft_memset(void *str, int c, size_t n);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+void			*ft_memchr(const void *str, int c, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
+size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+int				ft_strncmp(const char *str1, const char *str2, size_t n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strnstr(const char	*big, const char *little, size_t len);
+void			*ft_memmove(void *destination, const void *source, size_t num);
 
 #endif
