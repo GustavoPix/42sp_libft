@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 16:55:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 17:31:10 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/28 17:14:31 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,10 @@ int	ft_atoi(char *str)
 	pos = 1;
 	while (gc_isspace(str[i]))
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		pos *= -1;
+		if (str[i] == '-')
+			pos *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
