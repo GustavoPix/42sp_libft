@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 11:15:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/28 16:46:52 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/29 12:54:18 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
+int				ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strnstr(const char	*big, const char *little, size_t len);
