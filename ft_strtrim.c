@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:56:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/25 19:37:32 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/29 14:46:15 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,20 @@ static int	gc_toRemoveLeft(char const *str, char const *set)
 
 	i = 0;
 	iset = 0;
-	while (str[i] && str[i] == set[iset])
+	while (str[i])
 	{
-		i++;
-		iset++;
-		if (!set[iset])
-			iset = 0;
+		while (set[iset])
+		{
+			if (str[i] == set[iset])
+			{
+				i++;
+				iset = -1;
+			}
+			iset++;
+		}
+		return (i);
 	}
-	return (i - iset);
+	return (i);
 }
 
 static int	gc_toRemoveRight(char const *str, char const *set)
@@ -36,28 +42,42 @@ static int	gc_toRemoveRight(char const *str, char const *set)
 	int	iset;
 
 	i = ft_strlen(str) - 1;
-	iset = ft_strlen(set) - 1;
-	while (str[i] && str[i] == set[iset])
+	iset = 0;
+	while (str[i] && i > 0)
 	{
-		i--;
-		iset--;
-		if (iset < 0)
-			iset = ft_strlen(set) - 1;
+		while (set[iset])
+		{
+			if (str[i] == set[iset])
+			{
+				i--;
+				iset = -1;
+			}
+			iset++;
+		}
+		return (i + 1);
 	}
-	return (i + (ft_strlen(set) - iset));
+	return (i + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*aux;
-	int		lRemove;
-	int		rRemove;
-	int		i;
+	char			*aux;
+	unsigned int	lRemove;
+	unsigned int	rRemove;
+	int				i;
 
 	lRemove = gc_toRemoveLeft(s1, set);
+	if (lRemove >= ft_strlen(s1))
+	{
+		aux = malloc(1 * sizeof(char));
+		aux[0] = '\0';
+		return (aux);
+	}
 	rRemove = gc_toRemoveRight(s1, set);
 	i = 0;
-	aux = malloc(rRemove - lRemove + 1);
+	aux = malloc((rRemove - lRemove + 1) * sizeof(char));
+	if (!aux)
+		return (NULL);
 	while (s1[i + lRemove] && i + lRemove < rRemove)
 	{
 		aux[i] = s1[i + lRemove];
