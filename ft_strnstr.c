@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 16:05:40 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 16:38:07 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/29 13:45:45 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 		return ((char *)&big[0]);
 	while (big[ib] && ib < len)
 	{
-		while (big[ib + il] == little[il])
+		while (big[ib + il] == little[il] && ib + il < len)
 		{
 			if (!little[il + 1])
 				return ((char *)&big[ib]);
