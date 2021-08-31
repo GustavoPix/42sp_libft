@@ -6,12 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 18:55:06 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/30 21:13:36 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/30 21:16:13 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static int	gc_numWords(char const *s, char c)
 {
