@@ -6,46 +6,89 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 18:55:06 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/26 18:17:11 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/08/30 21:13:36 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+#include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-static char	**gc_allocateArr(size_t qty)
+static int	gc_numWords(char const *s, char c)
 {
-	return ((char **)malloc(qty * sizeof(char *)));
+	int	qty;
+	int	i;
+	int	sw;
+
+	qty = 1;
+	i = 0;
+	sw = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			if (sw > 0)
+				qty++;
+			sw = 0;
+		}
+		else
+			sw++;
+		i++;
+	}
+	return (qty);
 }
 
-static char	**gc_countAndAlloc(char const *s, char c, size_t qty)
+static char	*gc_copyWord(char const *s, int qty)
 {
 	char	*aux;
-	char	**mat;
-	size_t	i;
-	size_t	size;
+	int		i;
 
 	i = 0;
-	size = 0;
-	while (s[size])
+	aux = malloc((qty + 1) * sizeof(char));
+	while (i < qty)
 	{
-		if (s[size] == c)
-			break ;
-		size++;
+		aux[i] = s[i];
+		i++;
 	}
-	aux = malloc(size + 1);
-	ft_memcpy(aux, &s[i], size);
-	aux[size] = '\0';
-	if (s[size])
-		mat = gc_countAndAlloc(&s[size + 1], c, qty + 1);
-	else
-		mat = gc_allocateArr(qty + 1);
-	mat[qty] = aux;
-	return (mat);
+	aux[i] = '\0';
+	return (aux);
+}
+
+static void	gc_populateWords(char const *s, char c, char **tab)
+{
+	int	i;
+	int	it;
+	int	sw;
+
+	i = 0;
+	it = 0;
+	sw = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			if (sw > 0)
+			{
+				tab[it] = gc_copyWord(&s[i - sw], sw);
+				it++;
+			}
+			sw = 0;
+		}
+		else
+			sw++;
+		i++;
+	}
+	if (sw > 0)
+		tab[it] = gc_copyWord(&s[i - sw], sw);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	return (gc_countAndAlloc(s, c, 0));
+	int		qtyWords;
+	char	**aux;
+
+	qtyWords = gc_numWords(s, c);
+	aux = malloc((qtyWords + 1) * sizeof(char *));
+	gc_populateWords(s, c, aux);
+	aux[qtyWords] = NULL;
+	return (aux);
 }
