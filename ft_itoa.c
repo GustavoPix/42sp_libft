@@ -6,12 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 18:15:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/26 18:52:48 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:48:32 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static char	*gc_intToChar(int n, size_t s)
 {
@@ -23,7 +22,7 @@ static char	*gc_intToChar(int n, size_t s)
 		aux = gc_intToChar(n / 10, s + 1);
 	else
 	{
-		aux = malloc(s + 1 * sizeof(char));
+		aux = calloc(s + 1, sizeof(char));
 		if (!aux)
 			return ((void *)0);
 	}
@@ -46,7 +45,7 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*aux;
 
-	i = 0;
+	i = 1;
 	if (n < 0)
 		i++;
 	aux = gc_intToChar(n, i);
