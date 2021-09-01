@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 18:55:06 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/30 21:16:13 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/01 20:10:08 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	gc_numWords(char const *s, char c)
 	int	i;
 	int	sw;
 
-	qty = 1;
+	qty = 0;
 	i = 0;
 	sw = 0;
 	while (s[i])
@@ -33,6 +33,8 @@ static int	gc_numWords(char const *s, char c)
 			sw++;
 		i++;
 	}
+	if (sw > 0)
+		qty++;
 	return (qty);
 }
 
