@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 18:15:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/01 19:48:32 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:50:24 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*gc_intToChar(int n, size_t s)
 		aux = gc_intToChar(n / 10, s + 1);
 	else
 	{
-		aux = calloc(s + 1, sizeof(char));
+		aux = ft_calloc(s + 1, sizeof(char));
 		if (!aux)
 			return ((void *)0);
 	}
