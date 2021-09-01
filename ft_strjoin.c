@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:09:10 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/24 19:47:08 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/01 18:44:06 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	ia = 0;
-	aux = malloc(ft_strlen(s1) + ft_strlen(s2) - 1);
+	aux = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	while (s1[i])
 	{
 		aux[ia] = s1[i];
