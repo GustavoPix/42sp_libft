@@ -16,21 +16,25 @@ void	*ft_memmove(void *destination, const void *source, size_t num)
 	size_t	i;
 	char	*pd;
 	char	*ps;
-	char	aux[255];
 
 	i = 0;
 	pd = (char *)destination;
 	ps = (char *)source;
-	while (i < num)
+	if (pd < ps)
 	{
-		aux[i] = ps[i];
-		i++;
+		while (i < num)
+		{
+			pd[i] = ps[i];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < num)
+	else
 	{
-		pd[i] = aux[i];
-		i++;
+		while (num > 0)
+		{
+			num--;
+			pd[num] = ps[num];
+		}
 	}
 	return (destination);
 }
