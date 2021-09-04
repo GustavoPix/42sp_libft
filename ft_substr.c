@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 18:31:11 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/24 18:55:45 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 12:04:38 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -21,12 +21,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	aux = malloc(len + 1);
 	if (aux)
 	{
-		while (i < len)
+		while (s[i + start] && i < len)
 		{
 			aux[i] = s[i + start];
 			i++;
 		}
-		aux[i] = '\0';
+		while (i <= len)
+		{
+			aux[i] = '\0';
+			i++;
+		}
+		return (aux);
 	}
-	return (aux);
+	else
+		return (NULL);
 }
