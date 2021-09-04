@@ -6,13 +6,14 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 11:15:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/29 12:54:18 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:14:26 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 char			*ft_itoa(int n);
 int				ft_isprint(int c);

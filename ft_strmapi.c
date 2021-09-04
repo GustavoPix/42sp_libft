@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 19:02:37 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/26 19:20:27 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:15:29 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(const char *s);
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

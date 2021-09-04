@@ -9,7 +9,7 @@
 /*   Updated: 2021/08/20 21:14:16 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *destination, const void *source, size_t num)
 {

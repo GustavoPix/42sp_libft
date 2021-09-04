@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 12:30:03 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 16:10:17 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:13:35 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {

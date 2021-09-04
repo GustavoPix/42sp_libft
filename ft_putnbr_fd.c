@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 20:05:40 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/26 20:13:45 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:14:34 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_itoa(int n);
 

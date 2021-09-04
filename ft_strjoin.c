@@ -6,12 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 19:09:10 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/01 18:44:06 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:15:10 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-unsigned int	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 20:10:28 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/31 21:10:49 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:15:18 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
