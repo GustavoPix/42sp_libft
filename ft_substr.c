@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 18:31:11 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/04 12:40:25 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/04 13:13:46 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*aux;
 
 	i = 0;
-	if (start > ft_strlen(s))
-	{
-		aux = malloc(1 * sizeof(char));
-		aux[0] = '\0';
-	}
-	else
-		aux = malloc((len + 1) * sizeof(char));
+	if (start + len > ft_strlen(s))
+		len = len - (ft_strlen(s) - (start + len));
+	aux = malloc((len + 1) * sizeof(char));
 	if (aux)
 	{
-		while (s[i + start] && i < len)
+		while (i < len)
 		{
 			aux[i] = s[i + start];
 			i++;
