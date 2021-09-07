@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 12:30:03 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/04 16:13:35 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:20:26 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	size_t	i;
-	char	*aux;
+	unsigned char	*aux;
 
 	i = 0;
-	aux = (char *)str;
+	aux = (unsigned char *)str;
 	while (i < n)
 	{
-		if (aux[i] == c)
+		if (aux[i] == (unsigned char)c)
 			return ((void *)&aux[i]);
 		i++;
 	}

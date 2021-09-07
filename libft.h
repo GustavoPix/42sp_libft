@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 11:15:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/04 16:14:26 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:08:10 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int				ft_isalpha(int c);
 int				ft_isalnum(int c);
 int				ft_tolower(int ch);
 int				ft_toupper(int ch);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s);
 unsigned int	ft_strlen(const char *str);
 void			ft_bzero(void *s, size_t n);
