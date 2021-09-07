@@ -6,14 +6,12 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 10:43:36 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/22 10:45:02 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:57:18 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int ch)
 {
-	if (ch > -129 && ch < -1)
-		ch += 256;
 	if (ch >= 'A' && ch <= 'Z')
 		return (ch + 32);
 	return (ch);
