@@ -6,9 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 10:50:47 by glima-de          #+#    #+#             */
-/*   Updated: 2021/08/29 12:14:03 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/08 18:52:16 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -23,5 +25,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	if (str[i] == '\0' && c == '\0')
 		return ((char *)&str[i]);
+	if (!ft_isascii(c))
+		return ((char *)&str[0]);
 	return (0);
 }
