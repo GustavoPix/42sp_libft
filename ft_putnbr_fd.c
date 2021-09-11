@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 20:05:40 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/11 13:50:34 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/11 13:57:34 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static void	ft_putchar(char c, int fd)
 
 static void	loopToPrint(int nb, int fd)
 {
-	char c;
+	char	c;
+
 	if (nb >= 10 || nb <= -10)
 	{
 		loopToPrint(nb / 10, fd);
