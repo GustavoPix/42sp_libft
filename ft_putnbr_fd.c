@@ -6,24 +6,35 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 20:05:40 by glima-de          #+#    #+#             */
-/*   Updated: 2021/09/04 16:14:34 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/09/10 21:57:44 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n);
+static void	ft_putchar(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+static void	loopToPrint(int nb, int fd)
+{
+	if (nb >= 10 || nb <= -10)
+	{
+		loopToPrint(nb / 10, fd);
+		loopToPrint(nb % 10, fd);
+	}
+	else
+	{
+		if (nb < 0)
+			nb *= -1;
+		ft_putchar(nb + '0', fd);
+	}
+}
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s;
-	int		i;
-
-	s = ft_itoa(n);
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (n < 0)
+		ft_putchar('-', fd);
+	loopToPrint(n, fd);
 }
