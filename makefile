@@ -53,9 +53,9 @@ FLAGS = -Wall -Wextra -Werror
 
 $(NAME):
 			${COMPILER} ${FLAGS} -c  ${SRCS}
-			ar rc ${NAME} ${OBJS}
+			ar rcs ${NAME} ${OBJS}
 
-all:		${NAME} clean
+all:		${NAME}
 
 clean:
 			rm -f ${OBJS}
